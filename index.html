@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Rest Countries API</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body id="body">
+    <div class="spinner">
+        <img src="/images/Spinner.svg" alt="">
+    </div>
+    <div class="stick">
+        <div class="div1">
+            <nav class="navbar">
+                <p>Where in the world?</p>
+                <button id="btn"><i class="fas fa-moon"></i>Dark Mode</button>
+            </nav>
+        </div>
+
+        <div class="div2">
+            <div class="div3">
+                <div id="form">
+                    <div class="div4">
+                        <i class="fas fa-search"></i>
+                        <input type="input" id="input" placeholder="Search for a country...">
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="div5">Filter by Region <i class="fas fa-chevron-down"></i></div>
+                    <div class="div6">
+                        <p class="region" id="africa">Africa</p>
+                        <p class="region" id="america">America</p>
+                        <p class="region" id="asia">Asia</p>
+                        <p class="region" id="europe">Europe</p>
+                        <p class="region" id="oceania">Oceania</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="flag-container">
+
+    </div>
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Anointed Osara</a>.
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
