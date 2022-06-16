@@ -10,34 +10,55 @@
 body {
     margin: 0;
     padding: 0;
-    background: hsl(0, 0%, 98%);
+    background: var(--bg);
     font-family: 'Nunito Sans', sans-serif;
+}
+
+p {
+    color: var(--color)
+}
+
+:root {
+    --bg: white;
+    --color: black;
+    --dark: white;
+    --boxShadow: 0 2px 10px 3px rgb(225, 222, 222);
+}
+
+.border div {
+    color: var(--color)
+}
+
+.body {
+    background-color: var(--bg);
+    color: var(--color);
 }
 
 .stick {
     position: sticky;
     top: 0;
     left: 0;
-    background: hsl(0, 0%, 98%);
+    background: var(--bg);
 }
 
 .sticky {
-    background: hsl(207, 26%, 17%) !important;
+    background-color: var(--bg);
 }
 
 .bg {
-    background: hsl(207, 26%, 17%) !important;
-    color: hsl(0, 0%, 100%) !important;
+    background: var(--bg);
+    color: var(--color);
 }
 
 .div1 {
-    box-shadow: 0 2px 5px rgb(228, 226, 226);
+    background: var(--dark);
+    box-shadow: var(--boxShadow);
     z-index: 10000;
 }
 
 .box {
     box-shadow: none;
-    background: hsl(209, 23%, 22%);
+    background: var(--dark);
 }
 
 .navbar {
@@ -48,6 +69,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    background: var(--dark);
 }
 
 .navbar p {
@@ -58,16 +80,21 @@ body {
 
 .navbar button {
     border: none;
-    background: hsl(0, 0%, 98%);
+    background: var(--dark);
     width: max-content;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    color: var(--color)
+}
+
+.navbar button i {
+    color: var(--color);
 }
 
 .butn {
-    color: hsl(0, 0%, 100%);
-    background: red !important;
+    background: var(--bg);
+    color: var(--color);
 }
 
 .navbar button i {
@@ -84,13 +111,17 @@ body {
 }
 
 .div4 {
-    background: white;
-    box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
-    color: hsl(0, 0%, 52%);
+    background: var(--dark);
+    box-shadow: var(--boxShadow);
+    color: var(--color);
     padding: 12px 20px;
     font-size: 15px;
     width: 500px;
     border-radius: 5px;
+}
+
+.div4 i {
+    color: var(--color)
 }
 
 .div4 input {
@@ -100,12 +131,13 @@ body {
     font-weight: 600;
     margin-left: 15px;
     width: 420px;
-    background-color: white;
+    background: var(--dark);
+    color: var(--color);
 }
 
 .input {
-    background: hsl(209, 23%, 22%) !important;
-    color: white;
+    background: var(--bg);
+    color: var(--color);
 }
 
 input::placeholder {
@@ -115,8 +147,8 @@ input::placeholder {
 
 .div5 {
     right: 50px;
-    background: white;
-    color: black;
+    background: var(--dark);
+    color: var(--color);
     padding: 15px 20px;
     font-size: 11px;
     font-weight: 800;
@@ -125,13 +157,13 @@ input::placeholder {
     justify-content: space-between;
     width: 180px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+    box-shadow: var(--boxShadow);
     cursor: pointer;
 }
 
 .shadow {
-    background: hsl(209, 23%, 22%);
-    color: white;
+    background: var(--dark);
+    color: var(--color);
     box-shadow: none;
 }
 
@@ -151,17 +183,17 @@ input::placeholder {
     border-radius: 5px;
     width: 180px;
     padding: 5px 20px 15px 20px;
-    background: white;
+    background: var(--dark);
     display: none;
 }
 
 .shade {
-    background: hsl(209, 23%, 22%);
+    background: var(--dark);
     box-shadow: none;
 }
 
 .shad {
-    color: white !important;
+    color: var(--color);
     box-shadow: none;
 }
 
@@ -188,17 +220,18 @@ input::placeholder {
 
 .js-div {
     border-radius: 5px;
-    box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+    box-shadow: var(--boxShadow);
     cursor: pointer;
+    background: var(--dark);
 }
 
 .js {
-    background: hsl(209, 23%, 22%) !important;
+    background: var(--bg);
     box-shadow: none !important;
 }
 
 .none {
-    background: hsl(209, 23%, 22%) !important;
+    background: var(--bg);
 }
 
 .img1 {
@@ -240,7 +273,7 @@ input::placeholder {
     align-items: center;
     z-index: 10000;
     opacity: 0.3;
-    background-color: white;
+    background-color: var(--color);
 }
 
 #single-flag {
@@ -250,7 +283,7 @@ input::placeholder {
     z-index: 1000;
     opacity: 0;
     pointer-events: none;
-    background: hsl(0, 0%, 98%);
+    background: var(--bg);
     top: 69px;
 }
 
@@ -260,7 +293,7 @@ input::placeholder {
 }
 
 .div-js {
-    background: hsl(0, 0%, 98%);
+    background: var(--bg);
     height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
@@ -269,7 +302,7 @@ input::placeholder {
 }
 
 .background {
-    background: hsl(209, 23%, 22%) !important;
+    background: var(--bg);
     box-shadow: none !important;
 }
 
@@ -317,7 +350,8 @@ input::placeholder {
     margin: -20px 5px 0 5px;
     padding: 8px 40px;
     text-align: center;
-    box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+    background: var(--dark);
+    box-shadow: var(--boxShadow);
 }
 
 .right {
@@ -345,14 +379,16 @@ input::placeholder {
     text-align: center;
     width: 130px;
     font-size: 17px;
-    background: hsl(0, 0%, 98%);
+    background: var(--dark);
     border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+    box-shadow: var(--boxShadow);
+    color: var(--color);
 }
 
 .button i {
     margin-right: 10px;
+    color: var(--color);
 }
 
 @media screen and (max-width: 1150px) {
@@ -360,22 +396,22 @@ input::placeholder {
         position: sticky;
         top: 0;
         left: 0;
-        background: hsl(0, 0%, 98%);
+        background: var(--bg);
     }
     .sticky {
-        background: hsl(207, 26%, 17%) !important;
+        background: var(--bg);
     }
     .bg {
-        background: hsl(207, 26%, 17%) !important;
-        color: hsl(0, 0%, 100%) !important;
+        background: var(--bg);
+        color: var(--color);
     }
     .div1 {
-        box-shadow: 0 2px 5px rgb(228, 226, 226);
+        box-shadow: var(--boxShadow);
         z-index: 10000;
     }
     .box {
         box-shadow: none;
-        background: hsl(209, 23%, 22%);
+        background: var(--dark);
     }
     .navbar {
         width: 100%;
@@ -384,6 +420,7 @@ input::placeholder {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background: var(--dark);
         padding: 20px 40px;
     }
     .navbar p {
@@ -393,19 +430,21 @@ input::placeholder {
     }
     .navbar button {
         border: none;
-        background: none;
+        background: var(--dark);
         width: max-content;
         font-size: 14px;
         font-weight: 600;
         z-index: 1000;
+        color: var(--color)
     }
     .btn {
-        color: hsl(0, 0%, 100%);
+        color: var(--color);
         background-color: red !important;
     }
     .navbar button i {
         margin-right: 10px;
         transform: rotate(-20deg);
+        color: var(--color);
     }
     .div3 {
         display: flex;
@@ -415,9 +454,9 @@ input::placeholder {
         max-width: 1440px;
     }
     .div4 {
-        background: white;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
-        color: hsl(0, 0%, 52%);
+        background: var(--dark);
+        box-shadow: var(--boxShadow);
+        color: var(--color);
         padding: 12px 20px;
         font-size: 15px;
         width: 500px;
@@ -430,11 +469,11 @@ input::placeholder {
         font-weight: 600;
         margin-left: 15px;
         width: 420px;
-        background-color: white;
+        background: var(--dark);
     }
     .input {
-        background: hsl(209, 23%, 22%) !important;
-        color: white;
+        background: var(--bg);
+        color: var(--color);
     }
     input::placeholder {
         font-size: 12px;
@@ -442,8 +481,8 @@ input::placeholder {
     }
     .div5 {
         right: 50px;
-        background: white;
-        color: black;
+        background: var(--dark);
+        color: var(--color);
         padding: 15px 20px;
         font-size: 11px;
         font-weight: 800;
@@ -452,11 +491,11 @@ input::placeholder {
         justify-content: space-between;
         width: 180px;
         border-radius: 5px;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        box-shadow: var(--boxShadow);
     }
     .shadow {
-        background: hsl(209, 23%, 22%);
-        color: white;
+        background: var(--dark);
+        color: var(--color);
         box-shadow: none;
     }
     .div5 img {
@@ -473,15 +512,15 @@ input::placeholder {
         border-radius: 5px;
         width: 180px;
         padding: 5px 20px 15px 20px;
-        background: white;
+        background: var(--dark);
         display: none;
     }
     .shade {
-        background: hsl(209, 23%, 22%);
+        background: var(--dark);
         box-shadow: none;
     }
     .shad {
-        color: white !important;
+        color: var(--color);
         box-shadow: none;
     }
     .show {
@@ -503,10 +542,11 @@ input::placeholder {
     }
     .js-div {
         border-radius: 5px;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        box-shadow: var(--boxShadow);
+        background: var(--dark);
     }
     .none {
-        background: hsl(209, 23%, 22%) !important;
+        background: var(--bg);
         box-shadow: none !important;
     }
     .img1 {
@@ -543,7 +583,7 @@ input::placeholder {
         align-items: center;
         z-index: 10000;
         opacity: 0.3;
-        background-color: white;
+        background-color: var(--color);
     }
     #single-flag {
         position: fixed;
@@ -552,7 +592,7 @@ input::placeholder {
         z-index: 1000;
         opacity: 0;
         pointer-events: none;
-        background: hsl(0, 0%, 98%);
+        background: var(--bg);
         top: 69px;
     }
     .show-modal {
@@ -560,7 +600,6 @@ input::placeholder {
         pointer-events: all !important;
     }
     .div-js {
-        background: hsl(0, 0%, 98%);
         height: 100vh;
         max-width: 1440px;
         margin: 0 auto;
@@ -568,7 +607,7 @@ input::placeholder {
         padding: 20px 40px;
     }
     .background {
-        background: hsl(209, 23%, 22%) !important;
+        background: var(--bg);
         box-shadow: none !important;
     }
     .flex {
@@ -609,7 +648,8 @@ input::placeholder {
         margin: -20px 5px 0 5px;
         padding: 8px 30px;
         text-align: center;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        background: var(--dark);
+        box-shadow: var(--boxShadow);
     }
     .right {
         display: flex;
@@ -632,13 +672,15 @@ input::placeholder {
         text-align: center;
         width: 130px;
         font-size: 17px;
-        background: hsl(0, 0%, 98%);
+        background: var(--dark);
         border: none;
         border-radius: 5px;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        box-shadow: var(--boxShadow);
+        color: var(--color);
     }
     .button i {
         margin-right: 10px;
+        color: var(--color);
     }
 }
 
@@ -647,27 +689,28 @@ input::placeholder {
         position: sticky;
         top: 0;
         left: 0;
-        background: hsl(0, 0%, 98%);
+        background: var(--bg);
     }
     .sticky {
-        background: hsl(207, 26%, 17%) !important;
+        background: var(--bg);
     }
     .bg {
-        background: hsl(207, 26%, 17%) !important;
-        color: hsl(0, 0%, 100%) !important;
+        background: var(--bg);
+        color: var(--color);
     }
     .div1 {
-        box-shadow: 0 2px 5px rgb(228, 226, 226);
+        box-shadow: var(--boxShadow);
         z-index: 10000;
     }
     .box {
         box-shadow: none;
-        background: hsl(209, 23%, 22%);
+        background: var(--dark);
     }
     .navbar {
         width: 100%;
         max-width: 1440px;
         margin: 0;
+        background: var(--dark);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -680,14 +723,14 @@ input::placeholder {
     }
     .navbar button {
         border: none;
-        background: none;
+        background: var(--dark);
         width: max-content;
         font-size: 15px;
         font-weight: 600;
         z-index: 1000;
     }
     .btn {
-        color: hsl(0, 0%, 100%);
+        color: var(--color);
         background-color: red !important;
     }
     .navbar button i {
@@ -705,9 +748,9 @@ input::placeholder {
         max-width: 1440px;
     }
     .div4 {
-        background: white;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
-        color: hsl(0, 0%, 52%);
+        background: var(--dark);
+        box-shadow: var(--boxShadow);
+        color: var(--color);
         padding: 20px 40px;
         font-size: 15px;
         width: 100%;
@@ -721,14 +764,14 @@ input::placeholder {
         font-weight: 600;
         margin-left: 15px;
         width: 80%;
-        background-color: white;
+        background: var(--dark);
     }
     .div4 i {
         font-size: 20px;
     }
     .input {
-        background: hsl(209, 23%, 22%) !important;
-        color: white;
+        background: var(--bg);
+        color: var(--color);
     }
     input::placeholder {
         font-size: 17px;
@@ -736,8 +779,8 @@ input::placeholder {
     }
     .div5 {
         right: 50px;
-        background: white;
-        color: black;
+        background: var(--dark);
+        color: var(--color);
         padding: 20px 30px;
         font-size: 17px;
         font-weight: 600;
@@ -746,14 +789,14 @@ input::placeholder {
         justify-content: space-between;
         width: 100%;
         border-radius: 5px;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        box-shadow: var(--boxShadow);
     }
     .div5 i {
         font-size: 13px;
     }
     .shadow {
-        background: hsl(209, 23%, 22%);
-        color: white;
+        background: var(--dark);
+        color: var(--color);
         box-shadow: none;
     }
     .wrap {
@@ -767,15 +810,15 @@ input::placeholder {
         border-radius: 5px;
         width: 100%;
         padding: 5px 30px 15px 30px;
-        background: white;
+        background: var(--dark);
         display: none;
     }
     .shade {
-        background: hsl(209, 23%, 22%);
+        background: var(--dark);
         box-shadow: none;
     }
     .shad {
-        color: white !important;
+        color: var(--color);
         box-shadow: none;
     }
     .show {
@@ -797,10 +840,11 @@ input::placeholder {
     }
     .js-div {
         border-radius: 5px;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        box-shadow: var(--boxShadow);
+        background: var(--dark);
     }
     .none {
-        background: hsl(209, 23%, 22%) !important;
+        background: var(--bg);
         box-shadow: none !important;
     }
     .img1 {
@@ -841,7 +885,7 @@ input::placeholder {
         align-items: center;
         z-index: 10000;
         opacity: 0.3;
-        background-color: white;
+        background-color: var(--color);
     }
     #single-flag {
         position: fixed;
@@ -850,7 +894,7 @@ input::placeholder {
         z-index: 1000;
         opacity: 0;
         pointer-events: none;
-        background: hsl(0, 0%, 98%);
+        background: var(--bg);
         top: 84px;
     }
     .show-modal {
@@ -858,7 +902,7 @@ input::placeholder {
         pointer-events: all !important;
     }
     .div-js {
-        background: hsl(0, 0%, 98%);
+        background: var(--bg);
         height: 100vh;
         max-width: 1440px;
         margin: 0 auto;
@@ -866,7 +910,7 @@ input::placeholder {
         padding: 0px 30px;
     }
     .background {
-        background: hsl(209, 23%, 22%) !important;
+        background: var(--bg);
         box-shadow: none !important;
     }
     .flex {
@@ -914,7 +958,8 @@ input::placeholder {
         margin: -20px 5px 40px 5px;
         padding: 5px 35px;
         text-align: center;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        background: var(--dark);
+        box-shadow: var(--boxShadow);
     }
     .right {
         display: flex;
@@ -938,12 +983,14 @@ input::placeholder {
         text-align: center;
         width: 130px;
         font-size: 17px;
-        background: hsl(0, 0%, 98%);
+        background: var(--dark);
         border: none;
         border-radius: 5px;
-        box-shadow: 0 2px 10px 3px rgb(225, 222, 222);
+        box-shadow: var(--boxShadow);
+        color: var(--color);
     }
     .button i {
         margin-right: 10px;
+        color: var(--color);
     }
 }

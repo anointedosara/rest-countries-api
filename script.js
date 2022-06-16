@@ -146,25 +146,23 @@ input.addEventListener("input", () => {
 
 
 let btn = document.getElementById("btn")
-btn.addEventListener("click", () => {
-    let jsdiv = document.getElementsByClassName("js-div")
-    for (let i = 0; i < jsdiv.length; i++) {
-        jsdiv[i].classList.add("js")
+const root = document.querySelector(':root')
+let darkMode = false
+const previousStyle = getComputedStyle(root);
+btn.addEventListener("click", function() {
+    darkMode = !darkMode
+    if (!darkMode) {
+        root.style.setProperty("--bg", "white")
+        root.style.setProperty("--color", "black")
+        root.style.setProperty("--dark", "white")
+        root.style.setProperty("--boxShadow", "0 2px 10px 3px rgb(225, 222, 222)")
+    } else {
+        root.style.setProperty("--bg", "hsl(207, 26%, 17%)")
+        root.style.setProperty("--color", "white")
+        root.style.setProperty("--dark", "hsl(209, 23%, 22%)")
+        root.style.setProperty("--boxShadow", "0 2px 10px 3px rgba(0, 0, 0, 0.2)")
     }
-    document.getElementById("body").classList.toggle("bg")
-    document.getElementById("btn").classList.toggle("bg")
-    document.querySelector(".div1").classList.toggle("box")
-    document.querySelector(".div4").classList.toggle("shadow")
-    document.querySelector("#single-flag").classList.toggle("background")
-    document.querySelector(".div-js").classList.toggle("background")
-    document.querySelector(".flex").classList.toggle("background")
-    document.querySelector(".div4 input").classList.toggle("input")
-    document.querySelector(".div5").classList.toggle("shadow")
-    document.querySelector(".div6").classList.toggle("shade")
-    document.querySelector(".stick").classList.toggle("sticky")
-    document.querySelector(".region").classList.toggle("shad")
-    btn.classList.toggle("none")
-    document.querySelector(".navbar").classList.toggle("nav")
+
 })
 
 let drop = document.querySelector(".div5")
